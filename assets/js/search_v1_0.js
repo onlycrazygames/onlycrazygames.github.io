@@ -15,3 +15,7 @@ $("#search-bar").on('keyup', function (e) {
 $( "#search-button" ).on( "click", function() {  
     doSearch();
 });
+
+$( document ).ready(function() {
+    $("#search-bar").focus();
+});
