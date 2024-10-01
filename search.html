@@ -4122,7 +4122,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
-        const q= (window.location.href.split("?q=")?.[1]?? "").replace(/-/g, "");
+        const q= (window.location.href.split("?q=")?.[1]?? "").replace(/ /g, "").replace(/\+/g, "").replace(/-/g, "");
         let found= false;
         let cnt= 0;
         console.log("q", q);
