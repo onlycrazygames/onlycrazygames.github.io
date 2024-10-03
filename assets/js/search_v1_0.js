@@ -1,12 +1,12 @@
 doSearch= function() {
-    const val= $("#search-bar").val().trim().replace(/ /g, "-");
+    const val= $("#search-input").val().trim().replace(/ /g, "-");
     if (val!= "") {
         // alert(val);
         window.location= "/search.html?q="+ val;
     }
 }
 
-$("#search-bar").on('keyup', function (e) {
+$("#search-input").on('keyup', function (e) {
     if (e.key === 'Enter' || e.keyCode === 13) {        
         doSearch();
     }
@@ -17,5 +17,5 @@ $( "#search-button" ).on( "click", function() {
 });
 
 $( document ).ready(function() {
-    $("#search-bar").focus();
+    $("#search-input").focus();
 });
