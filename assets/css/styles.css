@@ -309,9 +309,8 @@ h3.item-title {
   color: white;
   text-align: center;
   padding: 15px 0;
-  transform: translateY(100%);
   transition: transform .3s ease-in-out;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .list-game:hover .list-thumbnail img {
