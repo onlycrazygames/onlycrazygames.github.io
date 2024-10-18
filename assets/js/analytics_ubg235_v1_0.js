@@ -1,24 +1,24 @@
-function loadGoogleAnalytics(id) {
-    // Google tag (gtag.js)
-    var firstScript= document.getElementsByTagName("script")[0];
-    newScript= document.createElement("script");
-    newScript.async= "";
-    newScript.src= "https://www.googletagmanager.com/gtag/js?id="+ id;
+<script>
+  function loadGoogleAnalytics(id) {
+    var firstScript = document.getElementsByTagName("script")[0];
+    var newScript = document.createElement("script");
+    newScript.async = true;
+    newScript.src = "https://www.googletagmanager.com/gtag/js?id=" + id;
     firstScript.parentNode.insertBefore(newScript, firstScript);
 
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', id);
-}
+  }
 
-window.addEventListener("load", function() {
+  window.addEventListener("load", function() {
     if (navigator.webdriver) {
       console.log('Bot Browser');
-      loadGoogleAnalytics("G-LE1ZGTPC77");
-
+      loadGoogleAnalytics("G-5Q28Z4RCKL");  // Bot-specific ID
     } else {
       console.log('Human Browser');
-      loadGoogleAnalytics("G-KFFPC3CBG0");
+      loadGoogleAnalytics("G-5Q28Z4RCKL");  // Human-specific ID
     }
-});
+  });
+</script>
